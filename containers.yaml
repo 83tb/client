@@ -1,0 +1,24 @@
+# to be edited further
+
+version: v1beta2
+containers:
+  - name: oracle
+    image: orisi/oracle
+    ports:
+      - name: ssh
+        hostPort: 22
+        containerPort: 22
+      - name: bitmessage
+        hostPort: 8444
+        containerPort: 8444
+      - name: bitcoind
+        hostPort: 8333
+        containerPort: 8333
+      - name: oracle
+        hostPort: 2523
+        containerPort: 2523
+  
+    
+
+        
+    
