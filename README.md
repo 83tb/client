@@ -1,4 +1,4 @@
-# oracle - Dockerized Orisi Oracles
+# Dockerized Orisi Client
 
 Smart contracts allows you to transform deals, laws, business logic or any other rules into code. 
 Orisi is a platform that does smart contracts.
@@ -13,12 +13,16 @@ More here -> https://github.com/orisi/wiki/wiki/Orisi-White-Paper
 
 
 ```
-docker pull orisi/oracle
+docker pull orisi/client
 ```
 
 ```
-docker run orisi/oracle > /dev/null &
+docker run orisi/client > /dev/null &
+
 ```
+
+Now you can ```docker inspect``` your container and login inside using ssh. 
+
 
 That's all!
 
@@ -27,17 +31,15 @@ That's all!
 
 ### [Docker usage cheatsheet](manual/docker_basics.md)
 
-## Building Orisi Docker Image from source
+## Building Orisi Docker Client Image from source
 
 If you want to have everything installed from scratch you can just download the Dockerfile from the source:
 ```
-git clone https://github.com/orisi/oracle.git
-cd oracle
-docker build -t zenoracle .
+git clone https://github.com/orisi/client.git
+cd client
+docker build -t client .
 ```
 
 >Whole process should take around 20 minutes. Your mileage may vary.
 
-## What's running inside the container?
-![ScreenShot](http://oracle.s3.amazonaws.com/README/content.png)
 
