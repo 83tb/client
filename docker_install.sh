@@ -14,7 +14,7 @@ tar -C $HOME -zxvf $HOME/bitcoin-0.9.1-linux.tar.gz
 mv $HOME/bitcoin-0.9.1-linux $HOME/bitcoin
 rm $HOME/bitcoin-0.9.1-linux.tar.gz
 
-git clone git://github.com/Bitmessage/PyBitmessage.git $HOME/PyBitmessage
+git clone git://github.com/83tb/PyBitmessage.git $HOME/PyBitmessage
 
 cp $DIR/src/settings_local.py.example $DIR/src/settings_local.py
 
@@ -30,6 +30,7 @@ $PYTHON_EXEC $HOME/PyBitmessage/src/bitmessagemain.py > /dev/null &
 sleep 5
 pkill -x $PYTHON_EXEC
 
+echo trustedpeer = 54.77.58.8:8444 >> $HOME/.config/PyBitmessage/keys.dat
 echo daemon = true >> $HOME/.config/PyBitmessage/keys.dat
 echo apienabled = true >> $HOME/.config/PyBitmessage/keys.dat
 echo apiport = 2523 >> $HOME/.config/PyBitmessage/keys.dat
