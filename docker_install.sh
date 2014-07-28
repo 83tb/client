@@ -36,6 +36,7 @@ echo apienabled = true >> $HOME/.config/PyBitmessage/keys.dat
 echo apiport = 2523 >> $HOME/.config/PyBitmessage/keys.dat
 echo apiinterface = 127.0.0.1 >> $HOME/.config/PyBitmessage/keys.dat
 echo apiusername = bitrpc >> $HOME/.config/PyBitmessage/keys.dat
+echo defaultnoncetrialsperbyte = 40 >> $HOME/.config/PyBitmessage/keys.dat
 
 BMPW=`openssl rand -hex 32`
 echo "apipassword = $BMPW" >> $HOME/.config/PyBitmessage/keys.dat
