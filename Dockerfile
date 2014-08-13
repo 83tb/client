@@ -18,7 +18,7 @@ WORKDIR /disk
 
 
 
-RUN git clone  https://github.com/orisi/orisi.git /disk/orisi
+RUN git clone --branch timelock2 https://github.com/orisi/orisi.git /disk/orisi
 RUN git clone  https://github.com/orisi/oracle.git /disk/oracle
 
 RUN chmod +x /disk/oracle/docker_install.sh
